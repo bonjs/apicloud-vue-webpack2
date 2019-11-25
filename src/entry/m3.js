@@ -1,13 +1,9 @@
 
-import Vue from 'vue';
-import app from '../components/m3.vue'
+import App from '../components/m3.vue';
+import init from '../init.js'
 
-new Vue({
-	el: '#app',
-	render: function (h) {
-		return h(app)
-	}
-})
+init(App);
+
 /*
 if(module.hot) {
 	module.hot.accept();

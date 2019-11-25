@@ -1,9 +1,10 @@
 
+
 <template>
   <div>
     <the-nav></the-nav>
-    <div> 这是m4</div>
-    <button @click="go()"> 下一页</button>
+    <div>这是m4</div>
+    <button @click="go(5)">下一页</button>
   </div>
 </template>
 <script>
@@ -13,11 +14,10 @@ import Vue from 'vue';
 import axios from 'axios';
 import theNav from './theNav.vue'
 
-import vconsole from 'vconsole'
-
-new vconsole();
+import util from '../util.js'
 
 export default {
+  mixins: [util],
   data() {
     return {
     };
@@ -25,18 +25,7 @@ export default {
   async mounted() {
   },
   methods: {
-    go() {
-      //window.location.href = "./m5.html";
-      //return;
-      if (window.api) {
-        api.openWin({
-          name: "m5",
-          url: "./m5.html"
-        });
-      } else {
-        window.location.href = "./m5.html"
-      }
-    }
+    
   },
   components: {
     theNav

@@ -141,7 +141,6 @@ module.exports = {
 				return [];
 			}
 
-
 			var glob = require('glob')
 
 			var a = [];
@@ -166,7 +165,6 @@ module.exports = {
 
 		new webpack.NamedModulesPlugin(),
 		new VueLoaderPlugin(),
-		
 		
 		new webpack.DefinePlugin({
 			__DEV__: JSON.stringify(JSON.parse(isDev))
